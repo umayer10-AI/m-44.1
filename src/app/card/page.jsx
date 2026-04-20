@@ -1,11 +1,13 @@
 import { Button, Card, CloseButton } from '@heroui/react';
+import Image from 'next/image';
 import React from 'react';
 
 const page = () => {
     return (
-        <div><Card className="w-full items-stretch md:flex-row">
-      <div className="relative h-[140px] w-full shrink-0 overflow-hidden rounded-2xl sm:h-[120px] sm:w-[120px]">
-        <img
+        <div className='w-[80%] mx-auto'>
+          <Card variant='primary' className="w-full items-stretch md:flex-row border">
+      <div className="relative h-35 w-full shrink-0 overflow-hidden rounded-2xl sm:h-30 sm:w-30">
+        <Image width={100} height={100}
           alt="Cherries"
           className="pointer-events-none absolute inset-0 h-full w-full scale-125 object-cover select-none"
           loading="lazy"
@@ -30,7 +32,7 @@ const page = () => {
         </Card.Footer>
       </div>
     </Card>
-    <Card className="w-[320px]" variant="default">
+    <Card variant='primary' className="w-[320px] border">
         <Card.Header>
           <Card.Title>Default</Card.Title>
           <Card.Description>Standard card appearance (bg-surface)</Card.Description>
