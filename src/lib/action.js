@@ -11,6 +11,14 @@ export const createTask = async (formData) => {
     const newTask = Object.fromEntries(formData.entries());
     console.log(newTask)
 
+    if(!newTask.title){
+        return {success: false, messege: "Title is required"}
+    }
+
+    if(newTask.title.trim().length < 5){
+        return {success: false, messege: "Title is must be 5 character or longer"}
+    }
+
     const res = await postTask(newTask)
 
     if(res.ok){
