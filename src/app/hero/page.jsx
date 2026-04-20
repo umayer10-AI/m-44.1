@@ -9,7 +9,7 @@ const page = () => {
             <Button variant='danger'>Primary</Button>
             <Button variant="ghost" className={'bg-yellow-300'}>Ghost</Button>
             <Button variant="outline" className={'bg-green-400'}>Outline</Button>
-            <Button variant="tertiary" className={'text-black'}>Tertiary</Button>
+            <Button variant="tertiary">Tertiary</Button>
             <Button variant="danger-soft">Danger Soft</Button>
         </div>
     );
