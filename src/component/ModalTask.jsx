@@ -71,7 +71,7 @@ const ModalTask = ({createTask}) => {
                                                 <ListBox.ItemIndicator />
                                             </ListBox.Item>
                                             <ListBox.Item id="complete" textValue="Complete">
-                                                Complete
+                                                Completed
                                                 <ListBox.ItemIndicator />
                                             </ListBox.Item>
                                             

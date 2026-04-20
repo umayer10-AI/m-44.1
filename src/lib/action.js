@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { postTask } from "./tasks";
 
 export const createTask = async (formData) => {
@@ -9,5 +10,10 @@ export const createTask = async (formData) => {
     console.log(newTask)
 
     const res = await postTask(newTask)
+
+    if(res.ok){
+        revalidatePath('/tasks')
+    }
+
     return res
 }

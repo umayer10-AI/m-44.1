@@ -7,5 +7,5 @@ export const getTask = async () => {
 export const postTask = async (newTask) => {
     newTask.id = tasks.length + 1
     tasks.push(newTask)
-    return {success: true, messege: "Task Added Successfully"}
+    return {ok: true, messege: "Task Added Successfully"}
 }
