@@ -15,7 +15,7 @@ const ModalTask = ({createTask}) => {
                     <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
                         <CirclePlus className="size-5" />
                     </Modal.Icon>
-                    <Modal.Heading>Contact Us</Modal.Heading>
+                    <Modal.Heading>Add To Task</Modal.Heading>
                     
                     </Modal.Header>
                     <Modal.Body className="p-6">
@@ -30,7 +30,7 @@ const ModalTask = ({createTask}) => {
                             <Input placeholder="Enter your description" />
                         </TextField>
 
-        <Select className="w-[256px]" placeholder="Select one">
+        <Select name='Priority' className="w-[256px]" placeholder="Select one">
       <Label>Priority</Label>
       <Select.Trigger>
         <Select.Value />
@@ -54,7 +54,7 @@ const ModalTask = ({createTask}) => {
       </Select.Popover>
     </Select>
 
-                                        <Select className="w-[256px]" placeholder="Select one">
+                                        <Select name='Status' className="w-[256px]" placeholder="Select one">
                                         <Label>Status</Label>
                                         <Select.Trigger>
                                             <Select.Value />
@@ -80,9 +80,9 @@ const ModalTask = ({createTask}) => {
                                         </Select>
 
 
-                        <TextField className="w-full" name="message">
-                            <Label>Message</Label>
-                            <Input placeholder="Enter your message" />
+                        <TextField className="w-full" name="assignTo">
+                            <Label>Assign To</Label>
+                            <Input placeholder="Enter your Assign To" />
                         </TextField>
                         <Modal.Footer>
                             <Button slot="close" variant="secondary">
