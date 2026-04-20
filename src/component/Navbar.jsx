@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
 
@@ -14,8 +15,9 @@ const Navbar = () => {
                 <NavLink></NavLink>
 
                 <div>
-
+                    <ThemeToggle></ThemeToggle>
                 </div>
+                
             </header>
         </nav>
     );
