@@ -1,15 +1,25 @@
+"use client"
 import React from "react";
-import {Button, Input, Label, Modal, TextField, ListBox, Select} from "@heroui/react";
+import {Button, Input, Label, Modal, TextField, ListBox, Select, Form, FieldError} from "@heroui/react";
 import { newTaskAction } from "@/lib/action";
 
 const page = () => {
   return (
     <div className="w-1/3 mx-auto">
         <h2>Add new Task</h2>
-      <form action={newTaskAction} className="flex flex-col gap-4">
-        <TextField className="w-full" name="title" type="text">
+      <Form action={newTaskAction} className="flex flex-col gap-4">
+        <TextField
+        isRequired
+        minLength={5}
+        validate={(value) => {
+          if(value.length < 5) {
+            return "Password must be at least 5 characters";
+          }
+        }}
+         className="w-full" name="title" type="text">
           <Label>Title</Label>
           <Input placeholder="Enter your Task title" />
+          <FieldError />
         </TextField>
         <TextField className="w-full" name="description" type="text">
           <Label>Description</Label>
@@ -76,7 +86,7 @@ const page = () => {
             Submit Task
           </Button>
         </Modal.Footer>
-      </form>
+      </Form>
     </div>
   );
 };
